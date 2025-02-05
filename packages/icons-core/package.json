@@ -6,12 +6,17 @@
   "types": "./types/index.d.ts",
   "main": "dist/cjs",
   "module": "dist/esm",
-  "files": ["src", "types", "dist"],
+  "files": [
+    "src",
+    "types",
+    "dist"
+  ],
   "bin": {
     "componentize-icons": "dist/esm/componentize-icons.js"
   },
   "scripts": {
-    "build": "tamagui-build"
+    "build": "tamagui-build && yarn generate-types",
+    "generate-types": "tsc src/**/*.ts --declaration --emitDeclarationOnly --outDir types --jsx 'react-native' --noEmitOnError false"
   },
   "devDependencies": {
     "@tamagui/build": "^1.123.14",
@@ -22,6 +27,7 @@
     "cheerio": "^1.0.0",
     "minimist": "^1.2.8",
     "react": "*",
+    "typescript": "^5.7.3",
     "uppercamelcase": "^3.0.0"
   },
   "dependencies": {
