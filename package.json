@@ -1,0 +1,12 @@
+{
+  "name": "kubejen-tamagui-kit",
+  "packageManager": "yarn@4.6.0",
+  "private": true,
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "turbo": "^2.4.0"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}
