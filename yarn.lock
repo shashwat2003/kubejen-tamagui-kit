@@ -762,7 +762,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@kjt/icons-core@workspace:packages/icons-core":
+"@kjt/icons-core@workspace:^, @kjt/icons-core@workspace:packages/icons-core":
   version: 0.0.0-use.local
   resolution: "@kjt/icons-core@workspace:packages/icons-core"
   dependencies:
@@ -789,7 +789,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@kjt/untitled-icons@workspace:packages/untitled-icons"
   dependencies:
+    "@kjt/icons-core": "workspace:^"
     "@tamagui/build": "npm:^1.123.14"
+    typescript: "npm:^5.7.3"
   languageName: unknown
   linkType: soft
 
