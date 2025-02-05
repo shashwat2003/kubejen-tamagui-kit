@@ -62,3 +62,5 @@ export declare const createFont: ({ platformFontConfig, sizeConfig: propSizeConf
     lineHeight: FontSizes;
     weight: FontSizes;
 };
+export * from "./defaults";
+export * from "./types";

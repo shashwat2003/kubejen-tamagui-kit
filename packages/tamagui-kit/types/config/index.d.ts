@@ -55,9 +55,9 @@ export declare const defaultConfig: {
                 };
             }>;
             family: string;
-            size: import("./fonts/types").FontSizes;
-            lineHeight: import("./fonts/types").FontSizes;
-            weight: import("./fonts/types").FontSizes;
+            size: import("./fonts").FontSizes;
+            lineHeight: import("./fonts").FontSizes;
+            weight: import("./fonts").FontSizes;
         };
     };
     themes: Record<"dark" | "light" | "light_accent" | "dark_accent" | "dark_error" | "dark_success" | "dark_warning" | "light_error" | "light_success" | "light_warning", {
@@ -720,9 +720,9 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
             };
         }>;
         family: string;
-        size: import("./fonts/types").FontSizes;
-        lineHeight: import("./fonts/types").FontSizes;
-        weight: import("./fonts/types").FontSizes;
+        size: import("./fonts").FontSizes;
+        lineHeight: import("./fonts").FontSizes;
+        weight: import("./fonts").FontSizes;
     };
 }, {
     allowedStyleValues: "somewhat-strict-web";
@@ -736,3 +736,9 @@ declare module "tamagui" {
     interface TamaguiCustomConfig extends Conf {
     }
 }
+export * from "./animations";
+export * from "./fonts";
+export * from "./media";
+export * from "./shorthands";
+export * from "./themes";
+export * from "./tokens";

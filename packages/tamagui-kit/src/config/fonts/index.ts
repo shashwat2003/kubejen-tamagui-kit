@@ -85,3 +85,6 @@ export const createFont = ({
     ...(isAndroid ? { face: getFace(platformFontConfig) } : {}),
   });
 };
+
+export * from "./defaults";
+export * from "./types";
