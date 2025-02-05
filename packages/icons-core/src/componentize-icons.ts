@@ -233,7 +233,7 @@ Text as _Text,
 Circle as _Circle,
 } from 'react-native-svg'
 
-import { createIcon } from '@kubejen-tamagui/icons-core'
+import { createIcon } from '@kjt/icons-core'
 
 export const [${className}Icon, Animated${className}Icon] = createIcon({
 name: '${className}',
