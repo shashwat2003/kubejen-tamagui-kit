@@ -1,0 +1,30 @@
+{
+  "name": "@kubejen/tamagui-kit",
+  "version": "0.0.1",
+  "packageManager": "yarn@4.6.0",
+  "source": "src/index.ts",
+  "types": "./types/index.d.ts",
+  "main": "dist/cjs",
+  "module": "dist/esm",
+  "files": [
+    "src",
+    "types",
+    "dist"
+  ],
+  "scripts": {
+    "build": "tamagui-build",
+    "generate-types": "tsc src/**/*.ts --declaration --emitDeclarationOnly --outDir types --jsx 'react-native' --noEmitOnError false"
+  },
+  "devDependencies": {
+    "@tamagui/build": "^1.123.14",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "@tamagui/animations-moti": "^1.123.17",
+    "@tamagui/colors": "^1.123.17",
+    "@tamagui/theme-builder": "^1.123.17",
+    "react": "*",
+    "react-native": "*",
+    "tamagui": "^1.123.17"
+  }
+}
