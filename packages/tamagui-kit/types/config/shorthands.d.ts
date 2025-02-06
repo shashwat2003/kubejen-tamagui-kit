@@ -15,3 +15,4 @@ export declare const shorthands: {
     readonly py: "paddingVertical";
     readonly f: "flex";
 };
+//# sourceMappingURL=shorthands.d.ts.map

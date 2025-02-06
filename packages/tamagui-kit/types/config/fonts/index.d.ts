@@ -16,15 +16,11 @@ export declare const createFont: ({ platformFontConfig, sizeConfig: propSizeConf
             normal?: string;
             italic?: string;
         };
-        normal: {
+        200: {
             normal?: string;
             italic?: string;
         };
         100: {
-            normal?: string;
-            italic?: string;
-        };
-        200: {
             normal?: string;
             italic?: string;
         };
@@ -56,7 +52,11 @@ export declare const createFont: ({ platformFontConfig, sizeConfig: propSizeConf
             normal?: string;
             italic?: string;
         };
-    }>;
+        normal: {
+            normal?: string;
+            italic?: string;
+        };
+    }> | undefined;
     family: string;
     size: FontSizes;
     lineHeight: FontSizes;
@@ -64,3 +64,4 @@ export declare const createFont: ({ platformFontConfig, sizeConfig: propSizeConf
 };
 export * from "./defaults";
 export * from "./types";
+//# sourceMappingURL=index.d.ts.map

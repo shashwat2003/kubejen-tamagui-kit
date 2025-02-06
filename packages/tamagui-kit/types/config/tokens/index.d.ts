@@ -106,3 +106,4 @@ export declare const tokens: {
         "156": number;
     };
 };
+//# sourceMappingURL=index.d.ts.map

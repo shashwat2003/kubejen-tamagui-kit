@@ -21,3 +21,4 @@ export declare const spacing: {
     "12xl": number;
     "13xl": number;
 };
+//# sourceMappingURL=spacing.d.ts.map

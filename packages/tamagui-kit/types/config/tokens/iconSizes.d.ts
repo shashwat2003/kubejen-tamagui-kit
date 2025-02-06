@@ -24,3 +24,4 @@ export declare const iconSizes: {
     "128": number;
     "156": number;
 };
+//# sourceMappingURL=iconSizes.d.ts.map

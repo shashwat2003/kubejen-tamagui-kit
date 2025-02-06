@@ -1,9 +1,4 @@
-declare const builtThemes: Record<"dark" | "light" | "light_accent" | "dark_accent" | "dark_error" | "dark_success" | "dark_warning" | "light_error" | "light_success" | "light_warning", {
-    accentColor: string;
-    background: string;
-    borderColor: string;
-    color: string;
-    outlineColor: string;
+declare const builtThemes: Record<"light" | "dark" | "light_accent" | "dark_accent" | "dark_warning" | "dark_error" | "dark_success" | "light_warning" | "light_error" | "light_success", {
     shadowColor: string;
     yellow1: string;
     yellow2: string;
@@ -48,11 +43,14 @@ declare const builtThemes: Record<"dark" | "light" | "light_accent" | "dark_acce
     shadow5: string;
     shadow6: string;
     colorTransparent: string;
+    color: string;
     colorHover: string;
     colorPress: string;
     colorFocus: string;
     placeholderColor: string;
+    outlineColor: string;
     accentBackground: string;
+    accentColor: string;
     background0: string;
     background02: string;
     background04: string;
@@ -75,9 +73,11 @@ declare const builtThemes: Record<"dark" | "light" | "light_accent" | "dark_acce
     color04: string;
     color06: string;
     color08: string;
+    background: string;
     backgroundHover: string;
     backgroundPress: string;
     backgroundFocus: string;
+    borderColor: string;
     borderColorHover: string;
     borderColorPress: string;
     borderColorFocus: string;
@@ -98,3 +98,4 @@ declare const builtThemes: Record<"dark" | "light" | "light_accent" | "dark_acce
 export type Themes = typeof builtThemes;
 export declare const themes: Themes;
 export {};
+//# sourceMappingURL=themes.d.ts.map

@@ -45,3 +45,4 @@ export declare const animations: import("@tamagui/web").AnimationDriver<{
         duration: number;
     };
 }>;
+//# sourceMappingURL=animations.d.ts.map

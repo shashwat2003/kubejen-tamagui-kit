@@ -33,3 +33,4 @@ export declare const media: {
         minWidth: number;
     };
 };
+//# sourceMappingURL=media.d.ts.map

@@ -13,15 +13,11 @@ export declare const defaultConfig: {
                     normal?: string;
                     italic?: string;
                 };
-                normal: {
+                200: {
                     normal?: string;
                     italic?: string;
                 };
                 100: {
-                    normal?: string;
-                    italic?: string;
-                };
-                200: {
                     normal?: string;
                     italic?: string;
                 };
@@ -53,19 +49,18 @@ export declare const defaultConfig: {
                     normal?: string;
                     italic?: string;
                 };
-            }>;
+                normal: {
+                    normal?: string;
+                    italic?: string;
+                };
+            }> | undefined;
             family: string;
             size: import("./fonts").FontSizes;
             lineHeight: import("./fonts").FontSizes;
             weight: import("./fonts").FontSizes;
         };
     };
-    themes: Record<"dark" | "light" | "light_accent" | "dark_accent" | "dark_error" | "dark_success" | "dark_warning" | "light_error" | "light_success" | "light_warning", {
-        accentColor: string;
-        background: string;
-        borderColor: string;
-        color: string;
-        outlineColor: string;
+    themes: Record<"light" | "dark" | "light_accent" | "dark_accent" | "dark_warning" | "dark_error" | "dark_success" | "light_warning" | "light_error" | "light_success", {
         shadowColor: string;
         yellow1: string;
         yellow2: string;
@@ -110,11 +105,14 @@ export declare const defaultConfig: {
         shadow5: string;
         shadow6: string;
         colorTransparent: string;
+        color: string;
         colorHover: string;
         colorPress: string;
         colorFocus: string;
         placeholderColor: string;
+        outlineColor: string;
         accentBackground: string;
+        accentColor: string;
         background0: string;
         background02: string;
         background04: string;
@@ -137,9 +135,11 @@ export declare const defaultConfig: {
         color04: string;
         color06: string;
         color08: string;
+        background: string;
         backgroundHover: string;
         backgroundPress: string;
         backgroundFocus: string;
+        borderColor: string;
         borderColorHover: string;
         borderColorPress: string;
         borderColorFocus: string;
@@ -479,12 +479,7 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
         "128": number;
         "156": number;
     };
-}, Record<"dark" | "light" | "light_accent" | "dark_accent" | "dark_error" | "dark_success" | "dark_warning" | "light_error" | "light_success" | "light_warning", {
-    accentColor: string;
-    background: string;
-    borderColor: string;
-    color: string;
-    outlineColor: string;
+}, Record<"light" | "dark" | "light_accent" | "dark_accent" | "dark_warning" | "dark_error" | "dark_success" | "light_warning" | "light_error" | "light_success", {
     shadowColor: string;
     yellow1: string;
     yellow2: string;
@@ -529,11 +524,14 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
     shadow5: string;
     shadow6: string;
     colorTransparent: string;
+    color: string;
     colorHover: string;
     colorPress: string;
     colorFocus: string;
     placeholderColor: string;
+    outlineColor: string;
     accentBackground: string;
+    accentColor: string;
     background0: string;
     background02: string;
     background04: string;
@@ -556,9 +554,11 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
     color04: string;
     color06: string;
     color08: string;
+    background: string;
     backgroundHover: string;
     backgroundPress: string;
     backgroundFocus: string;
+    borderColor: string;
     borderColorHover: string;
     borderColorPress: string;
     borderColorFocus: string;
@@ -678,15 +678,11 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
                 normal?: string;
                 italic?: string;
             };
-            normal: {
+            200: {
                 normal?: string;
                 italic?: string;
             };
             100: {
-                normal?: string;
-                italic?: string;
-            };
-            200: {
                 normal?: string;
                 italic?: string;
             };
@@ -718,7 +714,11 @@ export declare const config: import("tamagui").TamaguiInternalConfig<{
                 normal?: string;
                 italic?: string;
             };
-        }>;
+            normal: {
+                normal?: string;
+                italic?: string;
+            };
+        }> | undefined;
         family: string;
         size: import("./fonts").FontSizes;
         lineHeight: import("./fonts").FontSizes;
@@ -742,3 +742,4 @@ export * from "./media";
 export * from "./shorthands";
 export * from "./themes";
 export * from "./tokens";
+//# sourceMappingURL=index.d.ts.map

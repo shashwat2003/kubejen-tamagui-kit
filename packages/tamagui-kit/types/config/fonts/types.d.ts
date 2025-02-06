@@ -24,3 +24,4 @@ export type AvailableFontWeights = 300 | 400 | 500 | 600 | 700;
 export type FontSizes = {
     [key in AvailableFontSizes]: number;
 };
+//# sourceMappingURL=types.d.ts.map
