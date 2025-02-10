@@ -1,1 +1,2 @@
 export declare const FlexAlignBottomIcon: import("@kjt/icons-core").GeneratedIcon, AnimatedFlexAlignBottomIcon: import("@kjt/icons-core").GeneratedIcon;
+//# sourceMappingURL=FlexAlignBottomIcon.d.ts.map

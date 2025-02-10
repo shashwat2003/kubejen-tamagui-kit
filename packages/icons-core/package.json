@@ -1,39 +1,59 @@
 {
   "name": "@kjt/icons-core",
   "version": "0.0.1",
-  "packageManager": "yarn@4.6.0",
-  "source": "src/index.ts",
-  "types": "./types/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "react-native-import": "./dist/esm/index.native.js",
+      "react-native": "./dist/cjs/index.native.js",
+      "types": "./types/index.d.ts",
+      "import": "./dist/esm/index.mjs",
+      "require": "./dist/cjs/index.js"
+    }
+  },
   "main": "dist/cjs",
   "module": "dist/esm",
+  "module:jsx": "dist/jsx",
+  "source": "src/index.ts",
+  "types": "./types/index.d.ts",
+  "bin": {
+    "componentize-icons": "dist/esm/componentize-icons.js"
+  },
   "files": [
     "src",
     "types",
     "dist"
   ],
-  "bin": {
-    "componentize-icons": "dist/esm/componentize-icons.js"
-  },
   "scripts": {
-    "build": "tamagui-build && yarn generate-types",
-    "generate-types": "tsc src/**/*.ts --declaration --emitDeclarationOnly --outDir types --jsx 'react-native' --noEmitOnError false"
-  },
-  "devDependencies": {
-    "@tamagui/build": "^1.123.14",
-    "@types/minimist": "^1",
-    "@types/react": "*",
-    "@types/uppercamelcase": "^3",
-    "camelcase": "^8.0.0",
-    "cheerio": "^1.0.0",
-    "minimist": "^1.2.8",
-    "react": "*",
-    "typescript": "^5.7.3",
-    "uppercamelcase": "^3.0.0"
+    "build": "tamagui-build",
+    "clean": "tamagui-build clean",
+    "watch": "tamagui-build --watch"
   },
   "dependencies": {
     "@tamagui/helpers-icon": "^1.123.17",
     "@tamagui/web": "^1.123.17",
+    "camelcase": "^8.0.0",
+    "cheerio": "^1.0.0",
+    "minimist": "^1.2.8",
+    "react": "^19.0.0",
+    "react-native": "^0.76.5",
     "react-native-reanimated": "^3.16.7",
-    "react-native-svg": "^15.11.1"
+    "react-native-svg": "^15.11.1",
+    "uppercamelcase": "^3.0.0"
+  },
+  "devDependencies": {
+    "@tamagui/build": "^1.123.17",
+    "@types/minimist": "^1",
+    "@types/react": "^19.0.0",
+    "@types/uppercamelcase": "^3"
+  },
+  "packageManager": "yarn@4.6.0",
+  "removeSideEffects": "true",
+  "tamagui": {
+    "build": {
+      "skipEnvToMeta": true,
+      "bundle.native": "./src/index.ts",
+      "bundle.native.test": "./src/index.ts"
+    }
   }
 }

@@ -1,1 +1,2 @@
 export declare const AlignHorizontalCentre01Icon: import("@kjt/icons-core").GeneratedIcon, AnimatedAlignHorizontalCentre01Icon: import("@kjt/icons-core").GeneratedIcon;
+//# sourceMappingURL=AlignHorizontalCentre01Icon.d.ts.map

@@ -1,25 +1,48 @@
 {
   "name": "@kjt/untitled-icons",
   "version": "0.0.1",
-  "packageManager": "yarn@4.6.0",
-  "source": "src/index.ts",
-  "types": "./types/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "react-native-import": "./dist/esm/index.native.js",
+      "react-native": "./dist/cjs/index.native.js",
+      "types": "./types/index.d.ts",
+      "import": "./dist/esm/index.mjs",
+      "require": "./dist/cjs/index.js"
+    }
+  },
   "main": "dist/cjs",
   "module": "dist/esm",
+  "module:jsx": "dist/jsx",
+  "source": "src/index.ts",
+  "types": "./types/index.d.ts",
   "files": [
     "src",
     "types",
     "dist"
   ],
   "scripts": {
-    "build": "componentize-icons --input ./icons --output ./src && tamagui-build && yarn generate-types",
-    "generate-types": "tsc src/**/*.ts --declaration --emitDeclarationOnly --outDir types --jsx 'react-native' --noEmitOnError false"
-  },
-  "devDependencies": {
-    "@tamagui/build": "^1.123.14",
-    "typescript": "^5.7.3"
+    "build": "componentize-icons --input ./icons --output ./src && tamagui-build",
+    "clean": "tamagui-build clean",
+    "watch": "tamagui-build --watch"
   },
   "dependencies": {
-    "@kjt/icons-core": "workspace:^"
+    "@kjt/icons-core": "workspace:^",
+    "react": "^19.0.0",
+    "react-native": "^0.76.5",
+    "react-native-svg": "^15.11.1"
+  },
+  "devDependencies": {
+    "@tamagui/build": "^1.123.17",
+    "@types/react": "^19.0.0"
+  },
+  "packageManager": "yarn@4.6.0",
+  "removeSideEffects": "true",
+  "tamagui": {
+    "build": {
+      "skipEnvToMeta": true,
+      "bundle.native": "./src/index.ts",
+      "bundle.native.test": "./src/index.ts"
+    }
   }
 }

@@ -1,1 +1,2 @@
 export declare const CreditCardMinusIcon: import("@kjt/icons-core").GeneratedIcon, AnimatedCreditCardMinusIcon: import("@kjt/icons-core").GeneratedIcon;
+//# sourceMappingURL=CreditCardMinusIcon.d.ts.map

@@ -1,1 +1,2 @@
 export declare const BarChartSquareUpIcon: import("@kjt/icons-core").GeneratedIcon, AnimatedBarChartSquareUpIcon: import("@kjt/icons-core").GeneratedIcon;
+//# sourceMappingURL=BarChartSquareUpIcon.d.ts.map

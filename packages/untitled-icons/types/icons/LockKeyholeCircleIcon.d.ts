@@ -1,1 +1,2 @@
 export declare const LockKeyholeCircleIcon: import("@kjt/icons-core").GeneratedIcon, AnimatedLockKeyholeCircleIcon: import("@kjt/icons-core").GeneratedIcon;
+//# sourceMappingURL=LockKeyholeCircleIcon.d.ts.map

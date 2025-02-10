@@ -1,1 +1,2 @@
 export declare const DistributeSpacingVerticalIcon: import("@kjt/icons-core").GeneratedIcon, AnimatedDistributeSpacingVerticalIcon: import("@kjt/icons-core").GeneratedIcon;
+//# sourceMappingURL=DistributeSpacingVerticalIcon.d.ts.map

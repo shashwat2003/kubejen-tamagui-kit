@@ -7,7 +7,7 @@
   },
   "files": {
     "ignoreUnknown": false,
-    "ignore": ["types", "dist"]
+    "ignore": ["types", "dist", "node_modules"]
   },
   "formatter": {
     "enabled": true,

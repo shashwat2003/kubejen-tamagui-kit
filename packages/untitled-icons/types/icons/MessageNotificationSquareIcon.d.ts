@@ -1,1 +1,2 @@
 export declare const MessageNotificationSquareIcon: import("@kjt/icons-core").GeneratedIcon, AnimatedMessageNotificationSquareIcon: import("@kjt/icons-core").GeneratedIcon;
+//# sourceMappingURL=MessageNotificationSquareIcon.d.ts.map

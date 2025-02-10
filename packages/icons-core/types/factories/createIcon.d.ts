@@ -1,7 +1,7 @@
 import type { IconProps as TamaguiIconProps } from "@tamagui/helpers-icon";
+import { type ColorTokens, type GetTokenString, type ThemeKeys } from "@tamagui/web";
 import { type JSX } from "react";
 import type { Svg, SvgProps } from "react-native-svg";
-import { type ColorTokens, type ThemeKeys, type GetTokenString } from "@tamagui/web";
 type IconSizeTokens = GetTokenString<"icon">;
 type SvgPropsWithRef = SvgProps & {
     ref: React.ForwardedRef<Svg>;
@@ -21,3 +21,4 @@ export declare function createIcon({ name, getIcon, defaultFill, }: {
     defaultFill?: string;
 }): readonly [GeneratedIcon, GeneratedIcon];
 export {};
+//# sourceMappingURL=createIcon.d.ts.map

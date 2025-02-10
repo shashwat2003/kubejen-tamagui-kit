@@ -1,1 +1,2 @@
 export declare const ParagraphSpacingIcon: import("@kjt/icons-core").GeneratedIcon, AnimatedParagraphSpacingIcon: import("@kjt/icons-core").GeneratedIcon;
+//# sourceMappingURL=ParagraphSpacingIcon.d.ts.map

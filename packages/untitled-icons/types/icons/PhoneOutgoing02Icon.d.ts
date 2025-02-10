@@ -1,1 +1,2 @@
 export declare const PhoneOutgoing02Icon: import("@kjt/icons-core").GeneratedIcon, AnimatedPhoneOutgoing02Icon: import("@kjt/icons-core").GeneratedIcon;
+//# sourceMappingURL=PhoneOutgoing02Icon.d.ts.map

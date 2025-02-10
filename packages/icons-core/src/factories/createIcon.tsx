@@ -1,16 +1,16 @@
 import type { IconProps as TamaguiIconProps } from "@tamagui/helpers-icon";
-import { createElement, forwardRef, type JSX } from "react";
-import type { Svg, SvgProps } from "react-native-svg";
 import {
-  type ColorTokens,
-  type SpecificTokens,
-  Stack,
-  type ThemeKeys,
   isWeb,
+  Stack,
   styled,
   usePropsAndStyle,
+  type ColorTokens,
   type GetTokenString,
+  type SpecificTokens,
+  type ThemeKeys,
 } from "@tamagui/web";
+import { createElement, forwardRef, type JSX } from "react";
+import type { Svg, SvgProps } from "react-native-svg";
 import { withAnimated } from "./animated";
 
 type IconSizeTokens = GetTokenString<"icon">;
@@ -74,9 +74,9 @@ export function createIcon({
     );
 
     const svgProps: SvgPropsWithRef = {
+      style: style as unknown as SvgPropsWithRef["style"],
+      ...(props as unknown as SvgPropsWithRef),
       ref,
-      ...props,
-      style,
     };
 
     // biome-ignore lint/suspicious/noExplicitAny: <explanation>
