@@ -1,5 +1,7 @@
 import useToggleTheme from "@/hooks/useToggleTheme";
+import { ActivityIcon } from "@kjt/untitled-icons";
 import { Typography } from "@kubejen/tamagui-kit";
+import { AlarmCheck } from "@tamagui/lucide-icons";
 import { Link } from "one";
 import { View } from "tamagui";
 
@@ -34,6 +36,8 @@ export default function Index() {
         <Typography.Title level={2} userSelect="none">
           🧑‍🍳 {setting}
         </Typography.Title>
+        <ActivityIcon size={"$icon.34"} color={"$accentColor"} />
+        <AlarmCheck />
       </View>
     </View>
   );

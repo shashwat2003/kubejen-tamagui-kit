@@ -13,7 +13,7 @@ export default defineConfig({
     tamaguiPlugin({
       optimize: true,
       config: "./src/tamagui/config",
-      components: ["tamagui", "@kubejen/tamagui-kit", "@kjt/untitled-icons"],
+      components: ["tamagui"],
       outputCSS: "./src/tamagui/tamagui.css",
     }),
   ],

@@ -3,9 +3,9 @@
 import camelcase from "camelcase";
 import { load } from "cheerio";
 import fsExtra from "fs-extra";
+import minimist from "minimist";
 import path, { join } from "node:path";
 import uppercamelcase from "uppercamelcase";
-import minimist from "minimist";
 
 const { ensureDirSync, existsSync, readFileSync, readdirSync, writeFileSync } =
   fsExtra;
@@ -70,8 +70,7 @@ async function createSVGComponents(
     const outputPath = path.join(dirs.output, "icons", `${className}Icon.tsx`);
 
     // Add to index file even if it exists
-    indexFile += `\nexport * from './icons/${className}Icon'`;
-
+    indexFile += `\nexport { ${className}Icon } from './icons/${className}Icon'`;
     if (skipExisting && existsSync(outputPath)) {
       continue;
     }

@@ -1,8 +1,8 @@
 import type { IconProps as TamaguiIconProps } from "@tamagui/helpers-icon";
-import { type ColorTokens, type GetTokenString, type ThemeKeys } from "@tamagui/web";
 import { type JSX } from "react";
 import type { Svg, SvgProps } from "react-native-svg";
-type IconSizeTokens = GetTokenString<"icon">;
+import { type ColorTokens, type SpecificTokens, type ThemeKeys, type Tokens } from "tamagui";
+type IconSizeTokens = SpecificTokens<Tokens, "icon">;
 type SvgPropsWithRef = SvgProps & {
     ref: React.ForwardedRef<Svg>;
     style?: {

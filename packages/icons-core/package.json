@@ -39,6 +39,7 @@
     "react-native": "^0.76.5",
     "react-native-reanimated": "^3.16.7",
     "react-native-svg": "^15.11.1",
+    "tamagui": "^1.123.17",
     "uppercamelcase": "^3.0.0"
   },
   "devDependencies": {
