@@ -1,0 +1,50 @@
+{
+  "name": "@kjt/icons-core",
+  "version": "0.0.1",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "react-native-import": "./dist/esm/index.native.js",
+      "react-native": "./dist/cjs/index.native.js",
+      "types": "./types/index.d.ts",
+      "import": "./dist/esm/index.mjs",
+      "require": "./dist/cjs/index.js"
+    }
+  },
+  "main": "dist/cjs",
+  "module": "dist/esm",
+  "module:jsx": "dist/jsx",
+  "source": "src/index.ts",
+  "types": "./types/index.d.ts",
+  "bin": {
+    "componentize-icons": "dist/esm/componentize-icons.js"
+  },
+  "files": [
+    "src",
+    "types",
+    "dist"
+  ],
+  "scripts": {
+    "build": "tamagui-build",
+    "clean": "tamagui-build clean",
+    "watch": "tamagui-build --watch"
+  },
+  "packageManager": "pnpm@10.4.1",
+  "dependencies": {
+    "@tamagui/helpers-icon": "catalog:",
+    "camelcase": "^8.0.0",
+    "cheerio": "^1.0.0",
+    "fs-extra": "^11.3.0",
+    "minimist": "^1.2.8",
+    "react": "catalog:",
+    "react-native": "catalog:",
+    "react-native-reanimated": "catalog:",
+    "react-native-svg": "catalog:",
+    "tamagui": "catalog:",
+    "uppercamelcase": "^3.0.0"
+  },
+  "devDependencies": {
+    "@tamagui/build": "catalog:",
+    "@types/react": "catalog:"
+  }
+}

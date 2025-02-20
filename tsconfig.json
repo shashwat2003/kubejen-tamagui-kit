@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "strict": true,
+    "rootDir": ".",
+    "isolatedModules": true,
+    "noEmit": false,
+    "declaration": true,
+    "module": "System",
+    "moduleResolution": "node",
+    "preserveSymlinks": true,
+    "skipLibCheck": true,
+    "jsx": "react-jsx",
+    "noImplicitAny": false,
+    "types": ["node", "react"],
+    "lib": ["dom", "esnext"],
+    "target": "es2020"
+  },
+  "exclude": ["node_modules", "**/test", "**/dist", "**/types", "**/__tests__"]
+}
