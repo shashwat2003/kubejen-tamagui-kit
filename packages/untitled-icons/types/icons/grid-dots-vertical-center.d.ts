@@ -1,0 +1,2 @@
+export declare const GridDotsVerticalCenterIcon: import("@kjt/icons-core").GeneratedIcon, AnimatedGridDotsVerticalCenterIcon: import("@kjt/icons-core").GeneratedIcon;
+//# sourceMappingURL=grid-dots-vertical-center.d.ts.map

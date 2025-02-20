@@ -1,0 +1,2 @@
+export declare const ImageIndentRightIcon: import("@kjt/icons-core").GeneratedIcon, AnimatedImageIndentRightIcon: import("@kjt/icons-core").GeneratedIcon;
+//# sourceMappingURL=image-indent-right.d.ts.map

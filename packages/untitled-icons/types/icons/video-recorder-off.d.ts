@@ -1,0 +1,2 @@
+export declare const VideoRecorderOffIcon: import("@kjt/icons-core").GeneratedIcon, AnimatedVideoRecorderOffIcon: import("@kjt/icons-core").GeneratedIcon;
+//# sourceMappingURL=video-recorder-off.d.ts.map

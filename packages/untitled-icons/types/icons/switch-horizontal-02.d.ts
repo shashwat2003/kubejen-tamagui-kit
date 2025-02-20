@@ -1,0 +1,2 @@
+export declare const SwitchHorizontal02Icon: import("@kjt/icons-core").GeneratedIcon, AnimatedSwitchHorizontal02Icon: import("@kjt/icons-core").GeneratedIcon;
+//# sourceMappingURL=switch-horizontal-02.d.ts.map

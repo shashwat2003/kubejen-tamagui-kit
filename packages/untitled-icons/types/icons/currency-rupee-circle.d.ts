@@ -1,0 +1,2 @@
+export declare const CurrencyRupeeCircleIcon: import("@kjt/icons-core").GeneratedIcon, AnimatedCurrencyRupeeCircleIcon: import("@kjt/icons-core").GeneratedIcon;
+//# sourceMappingURL=currency-rupee-circle.d.ts.map

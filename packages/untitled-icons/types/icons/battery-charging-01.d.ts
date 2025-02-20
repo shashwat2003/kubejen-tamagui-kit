@@ -1,0 +1,2 @@
+export declare const BatteryCharging01Icon: import("@kjt/icons-core").GeneratedIcon, AnimatedBatteryCharging01Icon: import("@kjt/icons-core").GeneratedIcon;
+//# sourceMappingURL=battery-charging-01.d.ts.map

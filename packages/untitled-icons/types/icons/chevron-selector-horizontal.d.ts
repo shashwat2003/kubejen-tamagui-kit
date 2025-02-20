@@ -1,0 +1,2 @@
+export declare const ChevronSelectorHorizontalIcon: import("@kjt/icons-core").GeneratedIcon, AnimatedChevronSelectorHorizontalIcon: import("@kjt/icons-core").GeneratedIcon;
+//# sourceMappingURL=chevron-selector-horizontal.d.ts.map

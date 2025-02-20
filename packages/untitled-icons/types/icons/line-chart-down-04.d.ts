@@ -1,0 +1,2 @@
+export declare const LineChartDown04Icon: import("@kjt/icons-core").GeneratedIcon, AnimatedLineChartDown04Icon: import("@kjt/icons-core").GeneratedIcon;
+//# sourceMappingURL=line-chart-down-04.d.ts.map

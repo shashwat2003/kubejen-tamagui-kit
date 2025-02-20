@@ -1,0 +1,2 @@
+export declare const ArrowSquareUpLeftIcon: import("@kjt/icons-core").GeneratedIcon, AnimatedArrowSquareUpLeftIcon: import("@kjt/icons-core").GeneratedIcon;
+//# sourceMappingURL=arrow-square-up-left.d.ts.map

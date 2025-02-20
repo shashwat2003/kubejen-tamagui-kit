@@ -1,0 +1,2 @@
+export declare const Cryptocurrency01Icon: import("@kjt/icons-core").GeneratedIcon, AnimatedCryptocurrency01Icon: import("@kjt/icons-core").GeneratedIcon;
+//# sourceMappingURL=cryptocurrency-01.d.ts.map

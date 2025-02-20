@@ -1,0 +1,2 @@
+export declare const MessagePlusCircleIcon: import("@kjt/icons-core").GeneratedIcon, AnimatedMessagePlusCircleIcon: import("@kjt/icons-core").GeneratedIcon;
+//# sourceMappingURL=message-plus-circle.d.ts.map

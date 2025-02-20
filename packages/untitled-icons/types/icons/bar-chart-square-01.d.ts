@@ -1,0 +1,2 @@
+export declare const BarChartSquare01Icon: import("@kjt/icons-core").GeneratedIcon, AnimatedBarChartSquare01Icon: import("@kjt/icons-core").GeneratedIcon;
+//# sourceMappingURL=bar-chart-square-01.d.ts.map

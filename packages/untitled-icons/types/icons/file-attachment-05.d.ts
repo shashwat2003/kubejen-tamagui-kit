@@ -1,0 +1,2 @@
+export declare const FileAttachment05Icon: import("@kjt/icons-core").GeneratedIcon, AnimatedFileAttachment05Icon: import("@kjt/icons-core").GeneratedIcon;
+//# sourceMappingURL=file-attachment-05.d.ts.map

@@ -1,0 +1,2 @@
+export declare const NotificationTextIcon: import("@kjt/icons-core").GeneratedIcon, AnimatedNotificationTextIcon: import("@kjt/icons-core").GeneratedIcon;
+//# sourceMappingURL=notification-text.d.ts.map

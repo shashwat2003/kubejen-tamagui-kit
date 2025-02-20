@@ -1,0 +1,2 @@
+export declare const NavigationPointer02Icon: import("@kjt/icons-core").GeneratedIcon, AnimatedNavigationPointer02Icon: import("@kjt/icons-core").GeneratedIcon;
+//# sourceMappingURL=navigation-pointer-02.d.ts.map

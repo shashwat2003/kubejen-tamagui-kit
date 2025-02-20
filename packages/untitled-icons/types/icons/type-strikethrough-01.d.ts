@@ -1,0 +1,2 @@
+export declare const TypeStrikethrough01Icon: import("@kjt/icons-core").GeneratedIcon, AnimatedTypeStrikethrough01Icon: import("@kjt/icons-core").GeneratedIcon;
+//# sourceMappingURL=type-strikethrough-01.d.ts.map

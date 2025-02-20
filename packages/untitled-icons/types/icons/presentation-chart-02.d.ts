@@ -1,0 +1,2 @@
+export declare const PresentationChart02Icon: import("@kjt/icons-core").GeneratedIcon, AnimatedPresentationChart02Icon: import("@kjt/icons-core").GeneratedIcon;
+//# sourceMappingURL=presentation-chart-02.d.ts.map

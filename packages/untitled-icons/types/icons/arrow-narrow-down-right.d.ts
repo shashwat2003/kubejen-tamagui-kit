@@ -1,0 +1,2 @@
+export declare const ArrowNarrowDownRightIcon: import("@kjt/icons-core").GeneratedIcon, AnimatedArrowNarrowDownRightIcon: import("@kjt/icons-core").GeneratedIcon;
+//# sourceMappingURL=arrow-narrow-down-right.d.ts.map

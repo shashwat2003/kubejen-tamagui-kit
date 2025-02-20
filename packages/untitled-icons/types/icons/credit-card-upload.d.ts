@@ -1,0 +1,2 @@
+export declare const CreditCardUploadIcon: import("@kjt/icons-core").GeneratedIcon, AnimatedCreditCardUploadIcon: import("@kjt/icons-core").GeneratedIcon;
+//# sourceMappingURL=credit-card-upload.d.ts.map
