@@ -1,0 +1,40 @@
+{
+  "name": "docs",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "android": "one run:android",
+    "build:web": "one build",
+    "typecheck": "tsc --noEmit",
+    "clean": "one clean",
+    "dev": "one dev",
+    "dev:clean": "one dev --clean",
+    "ios": "one run:ios",
+    "prebuild:native": "one prebuild",
+    "serve": "one serve",
+    "upgrade:tamagui": "$npm_execpath up '*tamagui*' '@tamagui/*'"
+  },
+  "dependencies": {
+    "@kjt/untitled-icons": "workspace:^",
+    "@kubejen/tamagui-kit": "workspace:^",
+    "@tamagui/lucide-icons": "catalog:",
+    "@vxrn/color-scheme": "catalog:one",
+    "expo": "catalog:one",
+    "one": "catalog:one",
+    "react": "catalog:",
+    "react-native": "catalog:",
+    "react-native-reanimated": "catalog:",
+    "react-native-safe-area-context": "catalog:",
+    "react-native-screens": "catalog:",
+    "react-native-svg": "catalog:",
+    "react-native-web": "catalog:",
+    "tamagui": "catalog:"
+  },
+  "devDependencies": {
+    "@react-native-community/cli": "catalog:one",
+    "@tamagui/vite-plugin": "catalog:one",
+    "@types/react": "catalog:",
+    "vite": "catalog:one"
+  }
+}
