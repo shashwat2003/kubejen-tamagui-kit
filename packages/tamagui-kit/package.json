@@ -1,0 +1,43 @@
+{
+  "name": "@kubejen/tamagui-kit",
+  "version": "0.0.1",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "react-native-import": "./dist/esm/index.native.js",
+      "react-native": "./dist/cjs/index.native.js",
+      "types": "./types/index.d.ts",
+      "import": "./dist/esm/index.mjs",
+      "require": "./dist/cjs/index.js"
+    }
+  },
+  "main": "dist/cjs",
+  "module": "dist/esm",
+  "module:jsx": "dist/jsx",
+  "source": "src/index.ts",
+  "types": "./types/index.d.ts",
+  "files": [
+    "src",
+    "types",
+    "dist"
+  ],
+  "scripts": {
+    "build": "tamagui-build",
+    "clean": "tamagui-build clean",
+    "watch": "tamagui-build --watch"
+  },
+  "packageManager": "pnpm@10.4.1",
+  "dependencies": {
+    "@tamagui/animations-moti": "catalog:",
+    "@tamagui/colors": "catalog:",
+    "@tamagui/constants": "catalog:",
+    "@tamagui/theme-builder": "catalog:",
+    "react": "catalog:",
+    "react-native": "catalog:",
+    "tamagui": "catalog:"
+  },
+  "devDependencies": {
+    "@tamagui/build": "catalog:",
+    "@types/react": "catalog:"
+  }
+}
