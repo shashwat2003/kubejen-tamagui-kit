@@ -1,4 +1,4 @@
-export declare const Typography: import("react").ForwardRefExoticComponent<Omit<import("@tamagui/core").RNTamaguiViewNonStyleProps, "elevation" | keyof import("@tamagui/web").StackStyleBase | "transparent" | "fullscreen" | "circular" | "hoverTheme" | "pressTheme" | "focusTheme" | "elevate" | "bordered" | "backgrounded" | "radiused" | "padded" | "chromeless"> & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStyleBase> & {
+export declare const Typography: import("react").ForwardRefExoticComponent<Omit<import("@tamagui/core").RNTamaguiViewNonStyleProps, "elevation" | keyof import("@tamagui/web").StackStyleBase | "transparent" | "circular" | "fullscreen" | "hoverTheme" | "pressTheme" | "focusTheme" | "elevate" | "bordered" | "backgrounded" | "radiused" | "padded" | "chromeless"> & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStyleBase> & {
     elevation?: number | import("tamagui").SizeTokens | undefined;
     inset?: number | import("tamagui").SizeTokens | {
         top?: number;
@@ -103,19 +103,19 @@ export declare const Typography: import("react").ForwardRefExoticComponent<Omit<
 } & {
     Text: import("tamagui").TamaguiComponent<import("@tamagui/web").TamaDefer, import("tamagui").TamaguiTextElement, import("tamagui").TextNonStyleProps, import("@tamagui/web").TextStylePropsBase, {
         size?: import("tamagui").FontSizeTokens | undefined;
-        unstyled?: boolean | undefined;
         strong?: boolean | undefined;
+        unstyled?: boolean | undefined;
     }, import("@tamagui/web").StaticConfigPublic>;
     Title: import("tamagui").TamaguiComponent<import("@tamagui/web").TamaDefer, import("tamagui").TamaguiTextElement, import("tamagui").TextNonStyleProps, import("@tamagui/web").TextStylePropsBase, {
         size?: import("tamagui").FontSizeTokens | undefined;
-        unstyled?: boolean | undefined;
         strong?: boolean | undefined;
+        unstyled?: boolean | undefined;
         level?: 2 | 1 | 3 | 4 | 5 | undefined;
     }, import("@tamagui/web").StaticConfigPublic>;
     Paragraph: import("tamagui").TamaguiComponent<import("@tamagui/web").TamaDefer, import("tamagui").TamaguiTextElement, import("tamagui").TextNonStyleProps, import("@tamagui/web").TextStylePropsBase, {
         size?: import("tamagui").FontSizeTokens | undefined;
-        unstyled?: boolean | undefined;
         strong?: boolean | undefined;
+        unstyled?: boolean | undefined;
     }, import("@tamagui/web").StaticConfigPublic>;
 };
 //# sourceMappingURL=index.d.ts.map

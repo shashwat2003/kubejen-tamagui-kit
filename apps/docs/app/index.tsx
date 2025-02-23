@@ -36,7 +36,7 @@ export default function Index() {
         <Typography.Title level={2} userSelect="none">
           🧑‍🍳 {setting}
         </Typography.Title>
-        <ActivityIcon size={"$icon.34"} color={"$accentColor"} />
+        <ActivityIcon size={"$icon.30"} />
         <AlarmCheck />
       </View>
     </View>
