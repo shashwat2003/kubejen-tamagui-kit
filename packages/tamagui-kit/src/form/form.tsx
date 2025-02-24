@@ -1,7 +1,8 @@
 import RcForm from "rc-field-form";
 import { Form as OgForm, type FormProps as OgFormProps } from "tamagui";
 import { DisabledContextProvider } from "../config-provider/disabled-context";
-import { FormContext, VariantContext } from "./context";
+import { VariantContext } from "../config-provider/variants";
+import { FormContext } from "./context";
 import type { FormProps } from "./types";
 
 type InternalFormProps = FormProps & {

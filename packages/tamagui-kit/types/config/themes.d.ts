@@ -1,4 +1,7 @@
 declare const builtThemes: Record<"light" | "dark" | "light_accent" | "dark_accent" | "dark_warning" | "dark_error" | "dark_success" | "light_warning" | "light_error" | "light_success", {
+    outlineColor: string;
+    background: string;
+    borderColor: string;
     shadowColor: string;
     yellow1: string;
     yellow2: string;
@@ -48,7 +51,6 @@ declare const builtThemes: Record<"light" | "dark" | "light_accent" | "dark_acce
     colorPress: string;
     colorFocus: string;
     placeholderColor: string;
-    outlineColor: string;
     accentBackground: string;
     accentColor: string;
     background0: string;
@@ -73,11 +75,9 @@ declare const builtThemes: Record<"light" | "dark" | "light_accent" | "dark_acce
     color04: string;
     color06: string;
     color08: string;
-    background: string;
     backgroundHover: string;
     backgroundPress: string;
     backgroundFocus: string;
-    borderColor: string;
     borderColorHover: string;
     borderColorPress: string;
     borderColorFocus: string;

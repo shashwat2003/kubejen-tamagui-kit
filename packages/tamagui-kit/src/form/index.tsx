@@ -1,8 +1,9 @@
-import { Form as OGForm, withStaticProperties } from "tamagui";
+import { withStaticProperties } from "tamagui";
 import { InternalForm } from "./form";
 import { Item } from "./item";
+import { Trigger } from "./trigger";
 
 export const Form = withStaticProperties(InternalForm, {
-  Trigger: OGForm.Trigger,
-  Item: Item,
+  Trigger,
+  Item,
 });

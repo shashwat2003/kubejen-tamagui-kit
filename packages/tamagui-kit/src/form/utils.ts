@@ -2,11 +2,11 @@ import type { ViewProps } from "tamagui";
 import type { ValidateStatus } from "./types";
 
 const getColorForStatus = (
-  status?: ValidateStatus | null
+  status?: ValidateStatus | null,
 ): ViewProps["backgroundColor"] => {
   switch (status) {
     case "error":
-      return "$color.red10Light";
+      return "$red10";
     default:
       return "$borderColor";
   }

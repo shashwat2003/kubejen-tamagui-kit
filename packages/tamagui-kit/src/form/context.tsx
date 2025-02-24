@@ -1,4 +1,3 @@
-import type { Variant } from "@/config-provider/variants";
 import { createContext } from "react";
 import type {
   FeedbackIcons,
@@ -22,4 +21,3 @@ type FormItemContextType = {
 
 export const FormContext = createContext<FormContextType>({});
 export const FormItemContext = createContext<FormItemContextType>({});
-export const VariantContext = createContext<Variant>("outlined");

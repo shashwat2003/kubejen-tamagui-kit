@@ -8,7 +8,11 @@ export declare const Form: (({ feedbackIcons, layout, disabled, loading, variant
 } & {
     componentProps?: import("tamagui").FormProps;
 }) => import("react/jsx-runtime").JSX.Element) & {
-    Trigger: import("tamagui").TamaguiComponent<import("@tamagui/web").GetFinalProps<import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/web").StackStyleBase, {}>, import("tamagui").TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps & void, import("@tamagui/web").StackStyleBase, {}, import("@tamagui/web").StaticConfigPublic>;
+    Trigger: import("tamagui").TamaguiComponent<Omit<import("@tamagui/web").GetFinalProps<import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/web").StackStyleBase, {}>, "extraProps"> & {
+        extraProps?: import("..").ButtonProps;
+    }, import("tamagui").TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps & void & {
+        extraProps?: import("..").ButtonProps;
+    }, import("@tamagui/web").StackStyleBase, {}, import("@tamagui/web").StaticConfigPublic>;
     Item: ({ layout, label, labelProps, wrapperProps, groupProps, hasFeedback, validateStatus, help, noHelper, initialValue, children, ...fieldProps }: import("rc-field-form/es/Field").FieldProps<any> & {
         layout?: import("./types").Layout;
         label?: import("react").ReactNode;

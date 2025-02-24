@@ -8,6 +8,7 @@ type ItemHelperProps = SizableTextProps & {
 const ItemHelper = ({ help, ...props }: ItemHelperProps) => {
   return (
     <Typography.Text
+      animation={"100ms"}
       enterStyle={{
         y: -10,
         opacity: 0,

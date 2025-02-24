@@ -1,5 +1,5 @@
 import type { Meta } from "rc-field-form/es/interface";
-import type { SizableTextProps } from "tamagui";
+import type { SizableTextProps, ThemeProps } from "tamagui";
 import type { ValidateStatus } from "../types";
 import { getColorForStatus } from "../utils";
 
@@ -51,4 +51,19 @@ function getStatus<DefaultValue>(
   return status;
 }
 
-export { genEmptyMeta, getHelperProps, getStatus };
+const getThemePropsForStatus = (status?: ValidateStatus | null): ThemeProps => {
+  const props: ThemeProps = {
+    name: undefined, // keep it undefined, cause issues otherwise, tamagui documented the same for animation prop, maybe same thing happens here too
+  };
+  switch (status) {
+    case "error":
+      props.name = "error";
+      break;
+    case "validating":
+      props.name = "warning";
+  }
+
+  return props;
+};
+
+export { genEmptyMeta, getHelperProps, getStatus, getThemePropsForStatus };

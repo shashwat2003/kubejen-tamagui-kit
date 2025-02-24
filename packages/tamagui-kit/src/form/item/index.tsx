@@ -1,19 +1,20 @@
-import { Typography } from "../../typography";
 import type { FieldProps } from "rc-field-form/es/Field";
 import Field from "rc-field-form/es/Field";
 import type { Meta } from "rc-field-form/es/interface";
-import { type ReactNode, useContext, useState } from "react";
+import { type ReactNode, useContext, useMemo, useState } from "react";
 import {
   AnimatePresence,
   Group,
   type GroupProps,
+  Theme,
   View,
   type ViewProps,
 } from "tamagui";
+import { Typography } from "../../typography";
 import { FormContext, FormItemContext } from "../context";
 import type { FeedbackIcons, Layout, ValidateStatus } from "../types";
 import ItemHelper from "./ItemHelper";
-import { genEmptyMeta, getHelperProps, getStatus } from "./utils";
+import { genEmptyMeta, getStatus, getThemePropsForStatus } from "./utils";
 
 // biome-ignore lint/suspicious/noExplicitAny: <explanation>
 type ItemProps<Values = any> = FieldProps<Values> & {
@@ -63,54 +64,53 @@ export const Item = ({
   );
   const mergedInitialValue = initialValue ?? "";
 
+  const themeProps = useMemo(() => {
+    return getThemePropsForStatus(mergedValidateStatus);
+  }, [mergedValidateStatus]);
+
+  const mergedHelperText = useMemo(() => {
+    return meta.errors.length ? meta.errors : [help ?? " "];
+  }, [meta.errors, help]);
+
   return (
-    <FormItemContext.Provider
-      value={{
-        validateStatus: mergedValidateStatus,
-        initialValue: mergedInitialValue,
-      }}
-    >
-      <Group gap="$md" {...groupProps} orientation={mergedLayout}>
-        {!!label && (
-          <View {...(isHorizontal && { jc: "center" })} {...labelProps}>
-            {typeof label === "string" ? (
-              <Typography.Text>
-                {label}
-                {isHorizontal && ":"}
-              </Typography.Text>
-            ) : (
-              label
+    <Theme {...themeProps}>
+      <FormItemContext.Provider
+        value={{
+          validateStatus: mergedValidateStatus,
+          initialValue: mergedInitialValue,
+        }}
+      >
+        <Group gap="$md" {...groupProps} orientation={mergedLayout}>
+          {!!label && (
+            <View {...(isHorizontal && { jc: "center" })} {...labelProps}>
+              {typeof label === "string" ? (
+                <Typography.Text>
+                  {label}
+                  {isHorizontal && ":"}
+                </Typography.Text>
+              ) : (
+                label
+              )}
+            </View>
+          )}
+          <View f={1} gap={"$md"}>
+            <Field
+              initialValue={mergedInitialValue}
+              {...fieldProps}
+              onMetaChange={onMetaChange}
+            >
+              {children}
+            </Field>
+            {noHelper !== true && (
+              <AnimatePresence exitBeforeEnter>
+                {mergedHelperText.map((error) => (
+                  <ItemHelper help={error} key={error} />
+                ))}
+              </AnimatePresence>
             )}
           </View>
-        )}
-        <View f={1} gap={"$md"}>
-          <Field
-            initialValue={mergedInitialValue}
-            {...fieldProps}
-            onMetaChange={onMetaChange}
-          >
-            {children}
-          </Field>
-          {noHelper !== true && (
-            <AnimatePresence exitBeforeEnter>
-              {meta.errors.length ? (
-                meta.errors.map((error, key) => (
-                  <ItemHelper
-                    help={error}
-                    key={key}
-                    {...getHelperProps(mergedValidateStatus)}
-                  />
-                ))
-              ) : (
-                <ItemHelper
-                  help={help ?? " "}
-                  {...getHelperProps(mergedValidateStatus)}
-                />
-              )}
-            </AnimatePresence>
-          )}
-        </View>
-      </Group>
-    </FormItemContext.Provider>
+        </Group>
+      </FormItemContext.Provider>
+    </Theme>
   );
 };

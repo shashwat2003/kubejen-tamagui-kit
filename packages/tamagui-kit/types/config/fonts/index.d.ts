@@ -16,11 +16,11 @@ export declare const createFont: ({ platformFontConfig, sizeConfig: propSizeConf
             normal?: string;
             italic?: string;
         };
-        200: {
+        100: {
             normal?: string;
             italic?: string;
         };
-        100: {
+        200: {
             normal?: string;
             italic?: string;
         };
