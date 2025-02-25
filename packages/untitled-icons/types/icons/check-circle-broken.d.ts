@@ -1,0 +1,2 @@
+export declare const CheckCircleBrokenIcon: import("@kjt/icons-core").GeneratedIcon, AnimatedCheckCircleBrokenIcon: import("@kjt/icons-core").GeneratedIcon;
+//# sourceMappingURL=check-circle-broken.d.ts.map

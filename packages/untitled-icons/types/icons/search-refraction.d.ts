@@ -1,0 +1,2 @@
+export declare const SearchRefractionIcon: import("@kjt/icons-core").GeneratedIcon, AnimatedSearchRefractionIcon: import("@kjt/icons-core").GeneratedIcon;
+//# sourceMappingURL=search-refraction.d.ts.map
