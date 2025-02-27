@@ -29,7 +29,8 @@
     "react-native-screens": "catalog:",
     "react-native-svg": "catalog:",
     "react-native-web": "catalog:",
-    "tamagui": "catalog:"
+    "tamagui": "catalog:",
+    "valtio": "^2.1.3"
   },
   "devDependencies": {
     "@react-native-community/cli": "catalog:one",

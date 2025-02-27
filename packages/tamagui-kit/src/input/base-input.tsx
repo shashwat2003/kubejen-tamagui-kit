@@ -1,6 +1,7 @@
 import clsx from "clsx";
-import { type ComponentProps, type ReactNode, useContext } from "react";
+import { type ComponentProps, useContext, useRef } from "react";
 import { Group, Input as OgInput } from "tamagui";
+import { proxy, useSnapshot } from "valtio";
 import { DisabledContext } from "../config-provider/disabled-context";
 import {
   resetStyles,
@@ -8,14 +9,8 @@ import {
   VariantContext,
   VariantFrame,
 } from "../config-provider/variants";
-import { useObjectState } from "../hooks";
-
-type BaseInputExtraProps = {
-  addonAfter?: ReactNode;
-  addonBefore?: ReactNode;
-  allowClear?: boolean | { clearIcon: ReactNode };
-  prefixCls?: string | undefined;
-};
+import { Prefix, Suffix } from "./affix";
+import type { BaseInputExtraProps } from "./types";
 
 export const BaseInput = OgInput.styleable<BaseInputExtraProps>(
   (propsIn, forwardedRef) => {
@@ -25,15 +20,32 @@ export const BaseInput = OgInput.styleable<BaseInputExtraProps>(
       allowClear,
       onFocus,
       onBlur,
+      onChange,
       prefixCls = "tk-input",
+      prefix,
+      suffix,
+      defaultValue,
+      value,
       ...props
     } = propsIn;
-    const [state, setState] = useObjectState({
-      focused: false,
-    });
+
+    const stateProxy = useRef(
+      proxy({ focused: false, value: defaultValue ?? "" }),
+    );
+    const stateSnap = useSnapshot(stateProxy.current);
 
     const disabled = useContext(DisabledContext);
     const variant = useContext(VariantContext);
+
+    const handleReset = () => {
+      stateProxy.current.value = "";
+      // biome-ignore lint/suspicious/noExplicitAny: cannot create custom event, workaround for now
+      onChange?.({ target: { value: "" } } as any);
+    };
+
+    if (value && value !== stateSnap.value) {
+      stateProxy.current.value = value;
+    }
 
     return (
       <Group
@@ -44,7 +56,7 @@ export const BaseInput = OgInput.styleable<BaseInputExtraProps>(
         {addonBefore && (
           <VariantAddonFrame
             variant={variant}
-            focused={state.focused}
+            focused={stateSnap.focused}
             className={clsx(`${prefixCls}-addon-before`)}
           >
             {addonBefore}
@@ -53,37 +65,53 @@ export const BaseInput = OgInput.styleable<BaseInputExtraProps>(
 
         <VariantFrame
           variant={variant}
-          focused={state.focused}
-          gap={"$md"}
+          focused={stateSnap.focused}
+          gap={"$xs"}
+          paddingHorizontal={"$md"}
           className={clsx(`${prefixCls}-variant-frame`)}
           f={1}
+          justifyContent="center"
+          alignItems="center"
         >
+          <Prefix prefix={prefix} />
           <OgInput
+            f={1}
             ref={forwardedRef}
             disabled={disabled}
             {...resetStyles}
             {...props}
             onFocus={(e) => {
-              setState({ focused: true });
+              stateProxy.current.focused = true;
               onFocus?.(e);
             }}
             onBlur={(e) => {
-              setState({ focused: false });
+              stateProxy.current.focused = false;
               onBlur?.(e);
+            }}
+            onChange={(event) => {
+              stateProxy.current.value = event.nativeEvent.text;
+              onChange?.(event);
             }}
             className={clsx(
               props.className,
               `${prefixCls}-box`,
               disabled && `${prefixCls}-disabled`,
-              state.focused && `${prefixCls}-focused`,
+              stateSnap.focused && `${prefixCls}-focused`,
             )}
+            value={stateSnap.value}
+          />
+          <Suffix
+            suffix={suffix}
+            allowClear={allowClear}
+            value={stateSnap.value}
+            onClear={handleReset}
           />
         </VariantFrame>
 
         {addonAfter && (
           <VariantAddonFrame
             variant={variant}
-            focused={state.focused}
+            focused={stateSnap.focused}
             className={clsx(`${prefixCls}-addon-after`)}
           >
             {addonAfter}

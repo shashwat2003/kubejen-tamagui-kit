@@ -1,12 +1,5 @@
-import { type ComponentProps, type ReactNode } from "react";
-type BaseInputExtraProps = {
-    addonAfter?: ReactNode;
-    addonBefore?: ReactNode;
-    allowClear?: boolean | {
-        clearIcon: ReactNode;
-    };
-    prefixCls?: string | undefined;
-};
+import { type ComponentProps } from "react";
+import type { BaseInputExtraProps } from "./types";
 export declare const BaseInput: import("tamagui").TamaguiComponent<Omit<Omit<import("@tamagui/web").GetFinalProps<import("@tamagui/web").TamaguiComponentPropsBaseBase & import("react-native").TextInputProps, import("@tamagui/web").TextStylePropsBase & {
     readonly placeholderTextColor?: Omit<import("tamagui").ColorTokens | import("@tamagui/web").ThemeValueFallbackColor, "unset"> | undefined;
     readonly selectionColor?: Omit<import("tamagui").ColorTokens | import("@tamagui/web").ThemeValueFallbackColor, "unset"> | undefined;
@@ -29,5 +22,4 @@ export declare const BaseInput: import("tamagui").TamaguiComponent<Omit<Omit<imp
     };
 }>;
 export type BaseInputProps = ComponentProps<typeof BaseInput>;
-export {};
 //# sourceMappingURL=base-input.d.ts.map

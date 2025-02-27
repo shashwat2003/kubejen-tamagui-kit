@@ -17,7 +17,6 @@ export default function Index() {
         onFinishFailed={(err) => {
           console.log(err);
         }}
-        variant="filled"
       >
         <Form.Item
           label="Username"
@@ -27,6 +26,7 @@ export default function Index() {
         >
           <Input
             width={"100%"}
+            allowClear
             addonBefore={
               <Typography.Text size={"$sm"}>https://</Typography.Text>
             }

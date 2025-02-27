@@ -28,6 +28,7 @@
   },
   "packageManager": "pnpm@10.4.1",
   "dependencies": {
+    "@kjt/untitled-icons": "workspace:^",
     "@tamagui/animations-moti": "catalog:",
     "@tamagui/colors": "catalog:",
     "@tamagui/constants": "catalog:",

@@ -8,6 +8,17 @@ export default defineConfig({
       web: {
         defaultRenderMode: "spa",
       },
+      react: {
+        scan: {
+          web: {
+            enabled: true,
+            showToolbar: true,
+          },
+          native: {
+            enabled: false,
+          },
+        },
+      },
     }),
 
     tamaguiPlugin({
